@@ -1,0 +1,60 @@
+.poster {
+    background: url('/src/assets/image/background.svg');
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+    overflow: hidden;
+}
+.poster-content {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+.content-text {
+    display: flex;
+    flex-direction: column;
+}
+.trend {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+}
+.line {
+    width: 30px;
+    height: 1px;
+    background-color: red;
+    margin-right: 3px;
+}
+.poster-title {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+.poster-title span {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #000;
+}
+.discover {
+    display: block;
+    width: 105px;
+    color: #000;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1.5px solid #000;
+}
+
+.image {
+    /* display: block; */
+    height: 480px;
+    flex: 1;
+}

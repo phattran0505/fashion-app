@@ -1,0 +1,99 @@
+.side-bar {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fefefe;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 0 5px 10px rgba(0,0,0,.05);
+    transition: .5s linear;
+}
+.side-bar.close {
+    right: -100%;
+    transition: .5s linear;
+}
+.header_sidebar {
+    box-shadow:14px -9px 5px 10px rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px; 
+}
+.header_sidebar span {
+    color: #000;
+    text-transform: uppercase;
+}
+.icon {
+    cursor: pointer;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    height: 435px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-bottom: 1px solid #ccc;
+}
+.total {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.total_money{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.delete_icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color:#dc4044 ;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+}
+.footer_sidebar {
+    padding: 0 20px;
+}
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    gap: 5px;
+}
+.view-cart, .checkout {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 13px;
+}
+.view-cart {
+    background-color: #b1b2b4;
+    color: #000;
+}
+.checkout {
+    background-color: #000;
+    color: #fff;
+}
+@media (min-width: 768px) {
+    .side-bar {
+        width: 35vw;
+    }
+}
+@media (min-width: 1280px) {
+    .side-bar {
+        max-width: 30vw;
+    }
+}

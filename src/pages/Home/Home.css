@@ -1,0 +1,11 @@
+.container {
+    /* z-index: 10; */
+    margin-top: 50px;
+}
+.cart_container {
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
