@@ -27,9 +27,9 @@ function Header() {
           : { backgroundColor: "#fefefe", boxShadow: "0 0 10px rgba(0,0,0,.5)" }
       }
     >
-      <div className="logo">
+      <div >
         <Link to="/">
-          <img src={logo} alt="no-logo" style={{ width: "40px" }}></img>
+          <img src={logo} alt="no-logo" className="logo"></img>
         </Link>
       </div>
       <div className="icon_container">

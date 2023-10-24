@@ -9,11 +9,12 @@ import CartItem from "../cartItem/CartItem";
 import { Link } from "react-router-dom";
 function SideBar() {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart, clearProducts, total } = useContext(CartContext);
+  const { cart, clearProducts, total, itemAmount } = useContext(CartContext);
+
   return (
     <div className={isOpen ? "side-bar" : "side-bar close"}>
       <div className="header_sidebar">
-        <span>Shoping bag (0)</span>
+        <span>Shoping bag ({itemAmount})</span>
         <FontAwesomeIcon
           className="icon"
           icon={faArrowRight}
@@ -35,13 +36,16 @@ function SideBar() {
           </div>
         </div>
 
-        
         <div className="links">
-          <Link to='/' className="view-cart">View cart</Link>
-          <Link to='/' className="checkout">Checkout</Link>
+          <Link to="/" className="view-cart">
+            View cart
+          </Link>
+          <Link to="/" className="checkout">
+            Checkout
+          </Link>
         </div>
       </div>
-      </div>
+    </div>
   );
 }
 

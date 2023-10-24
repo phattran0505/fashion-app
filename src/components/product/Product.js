@@ -13,11 +13,9 @@ function Product({ product }) {
     <div className="product">
       {/* image of product */}
       <div className="top">
-        {/* <Link to={`/product/${product.id}`} > */}
         <Link to={`/product/${product.id}`} className="cart">
           <img src={product.image} alt="no-product"></img>
         </Link>
-        {/* </Link> */}
         <div className="buttons">
           <div className="add" onClick={() => addToCart(product, product.id)}>
             <FontAwesomeIcon icon={faPlus} />

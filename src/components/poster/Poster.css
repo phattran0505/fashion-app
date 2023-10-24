@@ -52,9 +52,52 @@
     text-decoration: none;
     border-bottom: 1.5px solid #000;
 }
-
 .image {
-    /* display: block; */
+    display: block;
     height: 480px;
-    flex: 1;
+    margin-right: 70px;
+}
+@media screen and (min-width:767px) and (max-width: 1023px) {
+    .poster{
+        height: 400px;
+    }
+    .image {
+        height: 350px;
+        margin-right: 50px;
+    }
+    .trend, .discover {
+        font-size: 12px;
+    }
+    .poster-title span {
+        font-size: 40px;
+    }
+    .poster-title {
+        font-size: 40px;
+    }
+    .discover {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 767px)  {
+    .poster {
+        height: 200px;
+    }
+    .image {
+        height: 200px;
+    }
+    .trend, .discover {
+        font-size: 10px;
+    }
+    .discover {
+        width: 81px;
+    }
+    .line {
+        width: 20px;
+    }
+    .poster-title span {
+        font-size: 20px;
+    }
+    .poster-title {
+        font-size: 20px;
+    }
 }
