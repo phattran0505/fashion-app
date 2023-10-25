@@ -1,4 +1,3 @@
-// import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext } from "react";
@@ -28,12 +27,14 @@ function Product({ product }) {
       {/*  */}
 
       {/* info of product */}
-      <div className="bottom">
-        <p className="category">{product.category}</p>
-        <p className="product-title">{product.title}</p>
-        <span>
-          $<p className="price">{product.price}</p>
-        </span>
+      <div className="bottom" >
+        <Link to={`/product/${product.id}`} className="bottom-link">
+          <p className="category">{product.category}</p>
+          <p className="product-title">{product.title}</p>
+          <span>
+            $<p className="price">{product.price}</p>
+          </span>
+        </Link>
       </div>
       {/*  */}
     </div>

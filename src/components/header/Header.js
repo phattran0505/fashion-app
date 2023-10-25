@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 
 import { SidebarContext } from "../../contexts/SidebarContext";
 import { CartContext } from "../../contexts/CartContext";
@@ -15,7 +15,7 @@ function Header() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      window.scrollY > 60 ? setIsActive(false) : setIsActive(true);
+      window.scrollY > 60 ? setIsActive(true) : setIsActive(false);
     });
   });
   return (
@@ -23,11 +23,11 @@ function Header() {
       className="header"
       style={
         isActive
-          ? { backgroundColor: "transparent" }
-          : { backgroundColor: "#fefefe", boxShadow: "0 0 10px rgba(0,0,0,.5)" }
+          ? { backgroundColor: "#fefefe", boxShadow: "0 0 10px rgba(0,0,0,.5)" }
+          : { backgroundColor: "transparent" }
       }
     >
-      <div >
+      <div>
         <Link to="/">
           <img src={logo} alt="no-logo" className="logo"></img>
         </Link>

@@ -1,12 +1,13 @@
 import { useContext } from "react";
-import { SidebarContext } from "../../contexts/SidebarContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import "./SideBar.css";
-import { faArrowRight, faTrashCan } from "@fortawesome/free-solid-svg-icons";
-import { CartContext } from "../../contexts/CartContext";
-import CartItem from "../cartItem/CartItem";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+
+import { SidebarContext } from "../../contexts/SidebarContext";
+import { CartContext } from "../../contexts/CartContext";
+
+import CartItem from "../cartItem/CartItem";
+import "./SideBar.css";
 function SideBar() {
   const { isOpen, handleClose } = useContext(SidebarContext);
   const { cart, clearProducts, total, itemAmount } = useContext(CartContext);

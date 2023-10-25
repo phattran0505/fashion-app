@@ -7,9 +7,6 @@ function SidebarProvider({ children }) {
   const handleClose = () => {
     setIsOpen(false);
   };
-  const handleOpen=()=>{
-    setIsOpen(true)
-  }
   return (
     <SidebarContext.Provider value={{ isOpen, setIsOpen, handleClose }}>
       {children}

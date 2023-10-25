@@ -1,9 +1,10 @@
 import { useContext } from "react";
 
 import { ProductContext } from "../../contexts/ProductContext";
+
 import Product from "../../components/product/Product";
-import "./Home.css";
 import Poster from "../../components/poster/Poster";
+import "./Home.css";
 function Home() {
   // get data from ProductContext
   const { products } = useContext(ProductContext);
