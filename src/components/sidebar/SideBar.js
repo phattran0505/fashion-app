@@ -6,12 +6,13 @@ import { faArrowRight, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { SidebarContext } from "../../contexts/SidebarContext";
 import { CartContext } from "../../contexts/CartContext";
 
+import shoppingIcon from "../../assets/image/Shopping_bag.png";
 import CartItem from "../cartItem/CartItem";
 import "./SideBar.css";
 function SideBar() {
   const { isOpen, handleClose } = useContext(SidebarContext);
   const { cart, clearProducts, total, itemAmount } = useContext(CartContext);
-
+  console.log(cart);
   return (
     <div className={isOpen ? "side-bar" : "side-bar close"}>
       <div className="header_sidebar">
@@ -23,9 +24,18 @@ function SideBar() {
         />
       </div>
       <div className="body">
-        {cart.map((item) => (
-          <CartItem item={item} key={item.id} />
-        ))}
+        {cart.length > 0 ? (
+          cart.map((item) => <CartItem item={item} key={item.id} />)
+        ) : (
+          <div className="not-product">
+            <img
+              src={shoppingIcon}
+              className="not-product_icon"
+              alt="no-pics"
+            ></img>
+            <p>Bạn không có sản phẩm</p>
+          </div>
+        )}
       </div>
       <div className="footer_sidebar">
         <div className="total">

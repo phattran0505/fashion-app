@@ -35,6 +35,22 @@
     overflow-x: hidden;
     border-bottom: 1px solid #ccc;
 }
+.not-product {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    gap: 20px;
+}
+.not-product_icon {
+    width: 150px;
+    height: 150px;
+}
+.not-products p {
+    font-size: 20px;
+}
 .total {
     width: 100%;
     display: flex;
