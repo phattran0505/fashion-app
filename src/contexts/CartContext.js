@@ -21,7 +21,7 @@ function CartProvider({ children }) {
     setTotal(newTotal)  
   }, [cart]);
   // add
-  const addToCart = (product, id) => {
+  function addToCart  (product, id)  {
     const newItem = { ...product, amount: 1 };
     const cartItems = cart.find((cartItem) => {
       return cartItem.id === id;
@@ -40,23 +40,23 @@ function CartProvider({ children }) {
     }
   };
   // remove
-  const removeProducts = (id) => {
+  function removeProducts (id) {
     const newCart = cart.filter((item) => {
       return item.id !== id;
     });
     setCart(newCart);
   };
   // clear
-  const clearProducts = () => {
+  function clearProducts () {
     setCart([]);
   };
   // increase
-  const increaseProduct = (id) => {
+  function increaseProduct (id) {
     const cartItem = cart.find((item) => item.id === id);
     addToCart(cartItem, id);
   };
   // decrease
-  const decreaseProduct = (id) => {
+  function decreaseProduct (id) {
     const cartItem = cart.find((item) => item.id === id);
     if (cartItem) {
       const newCart = cart.map((item) => {
@@ -68,7 +68,6 @@ function CartProvider({ children }) {
       });
       setCart(newCart);
     }
-
     if (cartItem.amount < 2) {
       removeProducts(id);
     }

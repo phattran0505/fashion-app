@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 // import product provider
 import ProductProvider from "./contexts/ProductContext";
 // import cart provider
 import CartProvider from "./contexts/CartContext";
-import { BrowserRouter } from "react-router-dom";
 // import sidebar provider
 import SidebarProvider from "./contexts/SidebarContext";
 

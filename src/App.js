@@ -7,6 +7,7 @@ import Header from './components/header/Header';
 import SiderBar from "./components/sidebar/SideBar"
 import Footer from "./components/footer/Footer"
 import './App.css';
+import PayMent from './components/payment/PayMent';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='product/:id' element={<ProductDetail/>}/>
+          <Route path='/checkout' element={<PayMent/>} />
         </Routes>
       <SiderBar/>
       <Footer/>

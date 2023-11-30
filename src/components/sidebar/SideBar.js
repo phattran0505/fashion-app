@@ -51,7 +51,7 @@ function SideBar() {
           <Link to="/" className="view-cart">
             View cart
           </Link>
-          <Link to="/" className="checkout">
+          <Link to="/checkout" className="checkout">
             Checkout
           </Link>
         </div>
